@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SmartFlow | Traffic Intelligence</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <div class="logo">
+            🚦
+        </div>
+
+        <div>
+
+            <h1>SMARTFLOW</h1>
+
+            <p>
+                Intelligent Traffic Control
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="system-status">
+
+        <span class="status-dot"></span>
+
+        SYSTEM ONLINE
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+    <!-- TITLE -->
+
+    <section class="section-title">
+
+        <div>
+
+            <h2>
+                Live Traffic Simulation
+            </h2>
+
+            <p>
+                Real-time intelligent intersection
+            </p>
+
+        </div>
+
+
+        <div class="live-badge">
+
+            ● LIVE
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         INTERSECTION
+    ========================= -->
+
+    <section class="intersection">
+
+
+        <!-- CITY BUILDINGS -->
+
+        <div class="city city-top">
+
+            <span>▥</span>
+            <span>▤</span>
+            <span>▥</span>
+            <span>▦</span>
+            <span>▥</span>
+
+        </div>
+
+
+        <div class="city city-bottom">
+
+            <span>▦</span>
+            <span>▥</span>
+            <span>▤</span>
+            <span>▥</span>
+            <span>▦</span>
+
+        </div>
+
+
+
+        <!-- ROADS -->
+
+        <div class="vertical-road"></div>
+
+        <div class="horizontal-road"></div>
+
+
+
+        <!-- ROAD MARKINGS -->
+
+        <div class="vertical-line"></div>
+
+        <div class="horizontal-line"></div>
+<!-- =========================
+     ZEBRA CROSSINGS
+========================= -->
+
+<div class="zebra zebra-top">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="zebra zebra-bottom">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="zebra zebra-left">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="zebra zebra-right">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+
+        <!-- =========================
+             TRAFFIC LIGHT TOP
+        ========================= -->
+
+        <div class="traffic-light light-top">
+
+            <span class="red"></span>
+
+            <span class="yellow"></span>
+
+            <span class="green"></span>
+
+        </div>
+
+
+
+        <!-- =========================
+             TRAFFIC LIGHT BOTTOM
+        ========================= -->
+
+        <div class="traffic-light light-bottom">
+
+            <span class="red"></span>
+
+            <span class="yellow"></span>
+
+            <span class="green"></span>
+
+        </div>
+
+
+
+        <!-- =========================
+             TRAFFIC LIGHT LEFT
+        ========================= -->
+
+        <div class="traffic-light light-left">
+
+            <span class="red"></span>
+
+            <span class="yellow"></span>
+
+            <span class="green"></span>
+
+        </div>
+
+
+
+        <!-- =========================
+             TRAFFIC LIGHT RIGHT
+        ========================= -->
+
+        <div class="traffic-light light-right">
+
+            <span class="red"></span>
+
+            <span class="yellow"></span>
+
+            <span class="green"></span>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         TRAFFIC STATISTICS
+    ========================= -->
+
+    <section class="stats">
+
+
+        <div class="stat-card">
+
+            <span>🚗</span>
+
+            <div>
+
+                <p>NORTH</p>
+
+                <h3 id="northCount">
+                    0
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <span>🚙</span>
+
+            <div>
+
+                <p>SOUTH</p>
+
+                <h3 id="southCount">
+                    0
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <span>🏍️</span>
+
+            <div>
+
+                <p>EAST</p>
+
+                <h3 id="eastCount">
+                    0
+                </h3>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card">
+
+            <span>🚌</span>
+
+            <div>
+
+                <p>WEST</p>
+
+                <h3 id="westCount">
+                    0
+                </h3>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTROL PANEL
+    ========================= -->
+
+    <section class="control-panel">
+
+
+        <!-- CURRENT SIGNAL -->
+
+        <div class="control-card">
+
+            <p>
+                CURRENT SIGNAL
+            </p>
+
+            <h2 id="currentSignal">
+                NORTH — SOUTH
+            </h2>
+
+            <span class="signal-green"
+                  id="signalStatus">
+
+                ● GREEN
+
+            </span>
+
+        </div>
+
+
+
+        <!-- TIMER -->
+
+        <div class="control-card">
+
+            <p>
+                REMAINING TIME
+            </p>
+
+            <h2>
+
+                <span id="timer">
+                    20
+                </span>
+
+                <small>
+                    SEC
+                </small>
+
+            </h2>
+
+        </div>
+
+
+
+        <!-- VEHICLES PASSED -->
+
+        <div class="control-card">
+
+            <p>
+                VEHICLES PASSED
+            </p>
+
+            <h2 id="vehiclesPassed">
+                0
+            </h2>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    SmartFlow Traffic Intelligence
+    •
+    Simulation Mode
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
